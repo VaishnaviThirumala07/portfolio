@@ -1,43 +1,469 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Vaishnavi Thirumala - Artificial Intelligence & Data Science student at IIIT Sri City. Specializing in Deep Learning, AI Agents, Reinforcement Learning, and Data Science.">
+    <meta name="theme-color" content="#080b11">
+    <title>Vaishnavi Thirumala | AI & Data Science Portfolio</title>
+
+    <!-- Boxicons CDN link for high-fidelity professional icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- CSS stylesheet link -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="header">
-    <nav>
-      <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="./about.html">About</a></li>
-      <li><a href="./skills.html">Skills</a></li>
-        <li> <a href="./education.html">Education</a></li>
-        <li> <a href="./contact.html ">Contact me</a></li>
-        <li> <button type="button" class="button-resume">Download resume</button></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="section">
-   <h1> Hi,I'm Vaishnavi Thirumala</h1>
-   <p class="des">
-    Welcome !!
-   </p>
-   <div class="hero">
-    <p>Hey! I'm Vaishnavi, a sophomore at IIIT Sricity.<br>I have intermediate knowledge in frontend development.<br> I am Passionate about creating user-friendly websites.<br>I enjoy learning new technologies and enhancing my skills in HTML,CSS and JavaScript. </p>
-   </div>
-  </div>
-  
-    
-  <footer class="gradient-background ">
-    <div id="foot" >
-        <a href="https://www.linkedin.com/in/vaishnavi-thirumala-566494294/">LinkedIn</a>
-        <a href="https://github.com/VaishnaviThirumala07">GitHub</a>
-        <a href="#">Twitter</a>
-        <br/>
-       </div>
-  </footer>
-</body>
-</html>
 
+<body>
+
+    <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-brand">Vaishnavi <span style="color: var(--clr-accent-cyan);">Thirumala</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#" class="nav-link active" data-sec="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-sec="about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-sec="skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-sec="projects">Projects</a></li>
+                <li><a href="#experience" class="nav-link" data-sec="experience">Experience</a></li>
+                <li><a href="#resume" class="nav-link" data-sec="resume">Resume</a></li>
+                <li><a href="#contact" class="nav-link" data-sec="contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span></span> Specializing in AI & Data Science
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <br><span class="text-gradient">Vaishnavi Thirumala</span>
+                </h1>
+                <div class="hero-subtitle">
+                    I Build &nbsp;<span id="typewriter-text" class="text-gradient-purple"></span><span
+                        class="typewriter-cursor"></span>
+                </div>
+                <p class="hero-desc">
+                    Third-year B.Tech student at <strong>IIIT Sri City</strong> specializing in Artificial Intelligence
+                    and Data Science. I engineer highly optimized deep learning models, deploy stateful AI agents, and
+                    apply rigorous statistical inference to solve complex, high-impact business problems.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#projects" class="btn btn-primary">
+                        View Projects
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+
+            <div class="hero-art-container">
+                <div class="network-sphere"></div>
+                <div class="avatar-backdrop">
+                    <div class="avatar-wrapper">
+                        <!-- Stunning Dynamic AI/ML & Data Science Vector Core -->
+                        <svg viewBox="0 0 200 200" class="ai-core-svg" style="width: 85%; height: 85%; z-index: 5;">
+                            <defs>
+                                <linearGradient id="ai-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="var(--clr-accent-purple)" />
+                                    <stop offset="100%" stop-color="var(--clr-accent-cyan)" />
+                                </linearGradient>
+                                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur stdDeviation="5" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                            </defs>
+
+                            <!-- Constellation Orbits -->
+                            <circle cx="100" cy="100" r="80" stroke="url(#ai-grad)" stroke-width="1.5" fill="none"
+                                stroke-dasharray="8 12" opacity="0.3"
+                                style="transform-origin: center; animation: rotate-slow 20s infinite linear;" />
+                            <circle cx="100" cy="100" r="55" stroke="var(--clr-accent-cyan)" stroke-width="1"
+                                fill="none" stroke-dasharray="4 6" opacity="0.25"
+                                style="transform-origin: center; animation: rotate-slow-reverse 12s infinite linear;" />
+
+                            <!-- Neural Network / Graph Structure -->
+                            <g filter="url(#glow)">
+                                <!-- Connections -->
+                                <line x1="55" y1="70" x2="100" y2="45" stroke="var(--clr-accent-purple)"
+                                    stroke-width="1.5" opacity="0.5" />
+                                <line x1="100" y1="45" x2="145" y2="70" stroke="var(--clr-accent-cyan)"
+                                    stroke-width="1.5" opacity="0.5" />
+                                <line x1="145" y1="70" x2="145" y2="130" stroke="var(--clr-accent-purple)"
+                                    stroke-width="1.5" opacity="0.5" />
+                                <line x1="145" y1="130" x2="100" y2="155" stroke="var(--clr-accent-cyan)"
+                                    stroke-width="1.5" opacity="0.5" />
+                                <line x1="100" y1="155" x2="55" y2="130" stroke="var(--clr-accent-purple)"
+                                    stroke-width="1.5" opacity="0.5" />
+                                <line x1="55" y1="130" x2="55" y2="70" stroke="var(--clr-accent-cyan)"
+                                    stroke-width="1.5" opacity="0.5" />
+
+                                <!-- Central connection lines -->
+                                <line x1="55" y1="70" x2="100" y2="100" stroke="var(--clr-accent-cyan)" stroke-width="1"
+                                    opacity="0.3" />
+                                <line x1="100" y1="45" x2="100" y2="100" stroke="white" stroke-width="1"
+                                    opacity="0.3" />
+                                <line x1="145" y1="70" x2="100" y2="100" stroke="var(--clr-accent-purple)"
+                                    stroke-width="1" opacity="0.3" />
+                                <line x1="145" y1="130" x2="100" y2="100" stroke="var(--clr-accent-cyan)"
+                                    stroke-width="1" opacity="0.3" />
+                                <line x1="100" y1="155" x2="100" y2="100" stroke="white" stroke-width="1"
+                                    opacity="0.3" />
+                                <line x1="55" y1="130" x2="100" y2="100" stroke="var(--clr-accent-purple)"
+                                    stroke-width="1" opacity="0.3" />
+
+                                <!-- Outer Nodes -->
+                                <circle cx="55" cy="70" r="5" fill="var(--clr-accent-purple)" />
+                                <circle cx="100" cy="45" r="7" fill="var(--clr-accent-cyan)" />
+                                <circle cx="145" cy="70" r="5" fill="var(--clr-accent-purple)" />
+                                <circle cx="145" cy="130" r="7" fill="var(--clr-accent-cyan)" />
+                                <circle cx="100" cy="155" r="5" fill="var(--clr-accent-purple)" />
+                                <circle cx="55" cy="130" r="7" fill="var(--clr-accent-cyan)" />
+
+                                <!-- Core central super node -->
+                                <circle cx="100" cy="100" r="14" fill="url(#ai-grad)" />
+                                <circle cx="100" cy="100" r="6" fill="white" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       ABOUT SECTION
+       ========================================================================== -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title text-gradient">About Me</h2>
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3>Intelligent Systems. Deep Learning. Statistical Rigor.</h3>
+                    <p>
+                        I am an Artificial Intelligence & Data Science student dedicated to building robust machine
+                        learning models, training complex deep neural architectures, and designing reinforcement
+                        learning agents. My approach combines advanced mathematical theory with solid software
+                        engineering to construct highly performant, data-driven systems.
+                    </p>
+                    <p>
+                        From training stateful LangGraph agents and deploying automated MLOps pipelines to researching
+                        variational EEG compression autoencoders, I focus on optimizing latency, resource bounds, and
+                        statistical validity. Active on <a href="https://leetcode.com/u/Vaishnavi0207/" target="_blank"
+                            style="color: var(--clr-accent-cyan); text-decoration: underline; font-weight: 500;">LeetCode</a>,
+                        I continuously refine my algorithmic problem-solving skills and mathematical foundations to
+                        engineer next-generation intelligent solutions.
+                    </p>
+                </div>
+                <div class="about-education">
+                    <div class="glass-card education-card">
+                        <div class="education-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                            </svg>
+                        </div>
+                        <div class="education-details">
+                            <h4>B.Tech in Artificial Intelligence & Data Science</h4>
+                            <div class="school">Indian Institute of Information Technology, Sri City</div>
+                            <div class="meta">
+                                <span>Aug 2023 - May 2027</span>
+                                <span>CGPA: 9.52</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SKILLS SECTION
+       ========================================================================== -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title text-gradient">Technical Skills</h2>
+
+            <div class="skills-tabs">
+                <button class="skills-tab-btn active" data-filter="all">All Skills</button>
+                <button class="skills-tab-btn" data-filter="languages">Languages</button>
+                <button class="skills-tab-btn" data-filter="ml-ai">ML & Deep Learning</button>
+                <button class="skills-tab-btn" data-filter="llms">LLM Frameworks</button>
+                <button class="skills-tab-btn" data-filter="data-tools">Tools & Analytics</button>
+                <button class="skills-tab-btn" data-filter="systems">Systems & Backend</button>
+            </div>
+
+            <div class="skills-grid" id="skills-grid">
+                <!-- Dynamic skills loaded from JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       PROJECTS SECTION
+       ========================================================================== -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title text-gradient">Featured Work</h2>
+
+            <div class="projects-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="llm">GenAI & LLMs</button>
+                <button class="filter-btn" data-filter="mlops">Machine Learning / MLOps</button>
+                <button class="filter-btn" data-filter="nlp">Natural Language Processing</button>
+                <button class="filter-btn" data-filter="dsp">Bio-Signal / DSP</button>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+                <!-- Dynamic project cards loaded from JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       EXPERIENCE & LEADERSHIP
+       ========================================================================== -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title text-gradient">Leadership & Involvement</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">NLP Domain Lead</h3>
+                                <div class="timeline-org">Epoch — AI/ML Club of IIIT Sri City</div>
+                            </div>
+                            <span class="timeline-date">Aug 2025 – Apr 2026</span>
+                        </div>
+                        <div class="timeline-body">
+                            <ul>
+                                <li>Spearheading NLP curriculum design and leading technical deep-dives for 100+ active
+                                    student developers on state-of-the-art architectures.</li>
+                                <li>Architecting open-source code repositories, structured workshops, and hackathons
+                                    focusing on explainable NLP, fine-tuning LLMs, and dense retrieval.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Design Team Core Member</h3>
+                                <div class="timeline-org">IIIT Sri City Campus Life</div>
+                            </div>
+                            <span class="timeline-date">Oct 2024 – Aug 2025</span>
+                        </div>
+                        <div class="timeline-body">
+                            <ul>
+                                <li>Curated full design languages and digital visual experiences for institutional tech
+                                    festivals, leading to high-converting event portfolios.</li>
+                                <li>Collaborated closely with development pipelines, ensuring that modern aesthetic
+                                    choices translate to production UI constraints.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       RESUME HUB
+       ========================================================================== -->
+    <section id="resume">
+        <div class="container">
+            <h2 class="section-title text-gradient">Academic Resume</h2>
+            <div class="glass-card resume-hub-box" style="text-align: center; padding: 4rem 2rem;">
+                <div class="resume-hub-icon"
+                    style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 16px; background: rgba(6, 182, 212, 0.05); border: 1px solid rgba(6, 182, 212, 0.15); color: var(--clr-accent-cyan); font-size: 2rem; margin-bottom: 1.5rem;">
+                    <i class="bx bx-file"></i>
+                </div>
+                <h3 class="resume-hub-title" style="font-size: 1.75rem; margin-bottom: 1rem;">Structured Performance
+                    Profile</h3>
+                <p class="resume-hub-desc"
+                    style="max-width: 650px; margin: 0 auto 2.5rem; color: var(--clr-text-secondary); font-size: 1.05rem; line-height: 1.6;">
+                    Review my complete standing in B.Tech Artificial Intelligence & Data Science, deep learning
+                    frameworks, stateful AI agent designs, and MLOps deployment pipelines. Download the print-ready
+                    resumes below.
+                </p>
+
+                <div class="resume-actions"
+                    style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="Vaishnavi_sDSResume.pdf" download="Vaishnavi_DS_Resume.pdf" class="btn btn-primary">
+                        Download Data Science Resume
+                        <i class="bx bx-download"
+                            style="font-size: 1.25rem; vertical-align: middle; margin-left: 0.5rem;"></i>
+                    </a>
+                    <a href="Vaishnavi'sResume.pdf" download="Vaishnavi_AIML_Resume.pdf" class="btn btn-secondary">
+                        Download AI / ML Resume
+                        <i class="bx bx-download"
+                            style="font-size: 1.25rem; vertical-align: middle; margin-left: 0.5rem;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       CONTACT SECTION
+       ========================================================================== -->
+    <!-- ==========================================================================
+       CONTACT SECTION
+       ========================================================================== -->
+    <section id="contact">
+        <div class="container" style="max-width: 850px;">
+            <h2 class="section-title text-gradient">Get In Touch</h2>
+            <div class="glass-card contact-card"
+                style="padding: 4rem 3rem; text-align: center; display: flex; flex-direction: column; align-items: center;">
+                <h3
+                    style="font-size: 1.85rem; margin-bottom: 1.25rem; background: linear-gradient(135deg, var(--clr-accent-purple) 20%, var(--clr-accent-cyan) 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    Open for Opportunities</h3>
+                <p
+                    style="max-width: 680px; margin: 0 auto 3rem; color: var(--clr-text-secondary); font-size: 1.05rem; line-height: 1.6;">
+                    I am actively seeking full-time job opportunities, researcher-engineer positions, and internships in
+                    Artificial Intelligence, Machine Learning, and Data Science. I am excited to apply my skills in deep
+                    learning, stateful AI agents, statistical analytics, and robust pipeline deployments to high-impact,
+                    real-world engineering teams. Let's connect!
+                </p>
+                <div class="contact-list"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem 3rem; text-align: left; width: 100%; max-width: 720px; margin: 0 auto;">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bx bx-envelope"></i>
+                        </div>
+                        <div class="contact-item-details">
+                            <h4>Email ID</h4>
+                            <p><a href="mailto:vaishnavithirumala06@gmail.com" class="text-gradient"
+                                    style="font-weight: 500;">vaishnavithirumala06@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bx bx-phone"></i>
+                        </div>
+                        <div class="contact-item-details">
+                            <h4>Contact Number</h4>
+                            <p><a href="tel:+919652335082" style="color: inherit; font-weight: 500;">+91 96523 35082</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bx bxl-linkedin-square"></i>
+                        </div>
+                        <div class="contact-item-details">
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://www.linkedin.com/in/vaishnavi-thirumala-566494294/" target="_blank"
+                                    style="color: inherit; font-weight: 500; text-decoration: underline;">linkedin.com/in/vaishnavi-thirumala</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bx bxl-github"></i>
+                        </div>
+                        <div class="contact-item-details">
+                            <h4>GitHub</h4>
+                            <p><a href="https://github.com/VaishnaviThirumala07" target="_blank"
+                                    style="color: inherit; font-weight: 500; text-decoration: underline;">github.com/VaishnaviThirumala07</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       FOOTER SECTION
+       ========================================================================== -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">Vaishnavi <span style="color: var(--clr-accent-cyan);">Thirumala</span></div>
+            <div class="footer-copy">&copy; 2026 Vaishnavi Thirumala. Developed using Vanilla HTML, CSS, & JS.</div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+       INTERACTIVE POPUP MODAL (PROJECT DETAILS)
+       ========================================================================== -->
+    <div class="modal-overlay" id="project-modal">
+        <div class="glass-card modal-container">
+            <button class="modal-close" id="modal-close" aria-label="Close modal">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <span class="modal-type-tag" id="modal-project-type">Generative AI</span>
+            <h3 class="modal-title" id="modal-project-title">Multi-Hop RAG Fact Verification Engine</h3>
+
+            <div class="modal-meta-grid">
+                <div class="modal-meta-item">
+                    <h5>Architecture</h5>
+                    <p id="modal-project-arch">2-Hop BM25 + FAISS</p>
+                </div>
+                <div class="modal-meta-item">
+                    <h5>Key Metric</h5>
+                    <p id="modal-project-metric">66.67% Recall@5</p>
+                </div>
+                <div class="modal-meta-item">
+                    <h5>Resources</h5>
+                    <p id="modal-project-resource">Zero Cloud (<1GB RAM)</p>
+                </div>
+            </div>
+
+            <div class="modal-body" id="modal-project-body">
+                <!-- Population by JS -->
+            </div>
+
+            <div class="modal-footer">
+                <a href="#" target="_blank" class="btn btn-secondary" id="modal-project-github">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                    Source Code
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Logic Script link -->
+    <script src="script.js"></script>
+</body>
+
+</html>
