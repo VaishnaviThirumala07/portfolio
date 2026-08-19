@@ -50,11 +50,11 @@ function initMobileMenu() {
    ========================================================================== */
 
 const roles = [
-    "Artificial Intelligence Agents.",
-    "Deep Learning Models.",
-    "Machine Learning Solutions.",
-    "Reinforcement Learning Systems.",
-    "Data Science Architectures."
+    "Production MLOps Pipelines.",
+    "Generative AI & LLMs.",
+    "Multi-Hop RAG Systems.",
+    "Stateful LangGraph Agents.",
+    "Deep Learning & Fine-Tuning."
 ];
 
 function initTypewriter() {
@@ -105,31 +105,34 @@ const skillsData = [
     { name: "SQL", category: "languages", icon: "bx-data", level: "Advanced" },
     { name: "R", category: "languages", icon: "bx-stats", level: "Familiarity" },
     
-    { name: "PyTorch", category: "ml-ai", icon: "bx-brain", level: "Advanced" },
+    { name: "PyTorch (FSDP/DDP)", category: "ml-ai", icon: "bx-brain", level: "Multi-GPU" },
+    { name: "LLaMA Fine-Tuning", category: "ml-ai", icon: "bx-slider-alt", level: "QLoRA" },
+    { name: "BGE-Large Embeddings", category: "ml-ai", icon: "bx-layer", level: "Dense Rerank" },
     { name: "TensorFlow", category: "ml-ai", icon: "bx-network-chart", level: "Proficient" },
     { name: "Scikit-learn", category: "ml-ai", icon: "bx-scatter-chart", level: "Expert" },
     { name: "NLP", category: "ml-ai", icon: "bx-message-rounded-dots", level: "Lead Domain" },
     { name: "Reinforcement Learning", category: "ml-ai", icon: "bx-bot", level: "Academic" },
     
+    { name: "LangGraph", category: "llms", icon: "bx-git-branch", level: "Stateful Agents" },
     { name: "LangChain", category: "llms", icon: "bx-link", level: "Advanced" },
-    { name: "LangGraph", category: "llms", icon: "bx-git-branch", level: "Agents" },
-    { name: "RAG & Retrieval", category: "llms", icon: "bx-search-alt", level: "Advanced" },
-    { name: "Gemini API", category: "llms", icon: "bx-sparkles", level: "Context-Aware" },
-    { name: "Vector DBs (FAISS)", category: "llms", icon: "bx-cabinet", level: "Dense Indexing" },
+    { name: "LlamaIndex", category: "llms", icon: "bx-select-multiple", level: "Node Parsing" },
+    { name: "LlamaParse Vision AI", category: "llms", icon: "bx-file-find", level: "PDF Vision" },
+    { name: "Hybrid Search (BM25+FAISS)", category: "llms", icon: "bx-search-alt", level: "Sparse + Dense" },
+    { name: "Gemini 2.5 Flash / API", category: "llms", icon: "bx-sparkles", level: "Synthetic QA" },
+    { name: "Ragas & ChromaDB", category: "llms", icon: "bx-cabinet", level: "RAG Eval & DB" },
     
     { name: "Pandas & NumPy", category: "data-tools", icon: "bx-table", level: "Expert" },
     { name: "SciPy", category: "data-tools", icon: "bx-calculator", level: "Advanced" },
-    { name: "MLflow", category: "data-tools", icon: "bx-line-chart", level: "Tracking" },
-    { name: "DVC", category: "data-tools", icon: "bx-package", level: "Data Versioning" },
+    { name: "MLflow & DVC", category: "data-tools", icon: "bx-line-chart", level: "Tracking & CT" },
+    { name: "Evidently AI", category: "data-tools", icon: "bx-pulse", level: "Drift Detection" },
+    { name: "SHAP / LIME", category: "data-tools", icon: "bx-analyse", level: "Explainability" },
+    { name: "A/B Testing & Bayesian", category: "data-tools", icon: "bx-test-tube", level: "Monte Carlo" },
     { name: "Git", category: "data-tools", icon: "bxl-git", level: "Advanced" },
     
     { name: "FastAPI", category: "systems", icon: "bx-bolt", level: "Backend API" },
     { name: "Docker", category: "systems", icon: "bxl-docker", level: "Containers" },
-    { name: "Streamlit", category: "systems", icon: "bx-slideshow", level: "Visual Apps" },
-    
-    { name: "SHAP / LIME", category: "data-tools", icon: "bx-analyse", level: "Explainability" },
-    { name: "A/B Testing", category: "data-tools", icon: "bx-test-tube", level: "Bayesian Methods" },
-    { name: "Bayesian Inference", category: "data-tools", icon: "bx-pie-chart-alt-2", level: "Monte Carlo" }
+    { name: "Prometheus & Grafana", category: "systems", icon: "bx-bar-chart-alt-2", level: "Monitoring" },
+    { name: "Streamlit", category: "systems", icon: "bx-slideshow", level: "Visual Apps" }
 ];
 
 function injectSkills() {
@@ -191,71 +194,71 @@ function initSkillsFilter() {
 
 const projectsData = [
     {
+        id: "churnops-mlops",
+        title: "ChurnOps: Automated MLOps Pipeline for Churn Prediction",
+        description: "A production-grade customer churn predictive ecosystem featuring stacking ensembles with threshold optimization, Evidently AI drift detection, and GitHub Actions automated retraining loop.",
+        tags: ["XGBoost", "LightGBM", "Optuna", "SHAP", "DVC", "MLflow", "Evidently AI", "Prometheus", "Grafana", "Docker"],
+        category: "mlops",
+        type: "Featured MLOps System",
+        architecture: "Stacking Ensemble (XGBoost, LightGBM, RF + LR meta-learner, 5-fold CV)",
+        metric: "81.2%→90.4% Accuracy, 0.84→0.91 ROC-AUC (~$40,800 net profit / 1k users, 560%+ ROI)",
+        resource: "IBM Telco Dataset (7,043 rows)",
+        github: "https://github.com/VaishnaviThirumala07/ChurnOps-Automated-ML-Pipeline",
+        details: [
+            "Built a stacking ensemble (XGBoost, LightGBM, Random Forest + Logistic Regression meta-learner, 5-fold CV) lifting accuracy from 81.2% to 90.4% and ROC-AUC from 0.84 to 0.91 on IBM Telco dataset (7,043 rows).",
+            "Designed a threshold optimizer across 100 probability intervals against customer LTV ($500) and campaign cost ($50), maximizing net profit to ~$40,800 per 1,000 customers (yielding 560%+ ROI).",
+            "Deployed a self-healing retraining loop via Evidently AI drift detection + Prometheus/Grafana metric exposure + GitHub Actions to auto-trigger DVC retraining and MLflow promotion when drift exceeds 50%."
+        ]
+    },
+    {
+        id: "rag-facthop",
+        title: "Multi-Hop RAG Fact Verification System",
+        description: "An end-to-end multi-hop RAG pipeline verifying complex claims against a Wikipedia corpus, combining sparse BM25 search with FAISS dense reranking under 1GB RAM on CPU.",
+        tags: ["BM25Okapi", "FAISS", "SentenceTransformers", "spaCy", "HuggingFace", "FastAPI", "Pyvis", "NetworkX"],
+        category: "llm",
+        type: "Featured RAG Engine",
+        architecture: "2-Hop BM25 Okapi Sparse + FAISS Dense Reranking (all-MiniLM-L6-v2, 384-dim)",
+        metric: "66.67% Recall@5 on FEVER benchmark at 1.2s CPU latency",
+        resource: "Zero Cloud Dependency (<1GB RAM CPU-only)",
+        github: "https://github.com/VaishnaviThirumala07/FactHop",
+        details: [
+            "Built a multi-hop RAG pipeline over a Wikipedia corpus achieving 66.67% Recall@5 on FEVER benchmarks at 1.2s latency on CPU-only hardware.",
+            "Combined BM25 Okapi sparse search with in-memory FAISS dense reranking (all-MiniLM-L6-v2, 384-dim) keeping the full pipeline <1GB RAM with zero cloud dependency.",
+            "Used spaCy NER (PERSON, ORG) for dynamic query expansion enabling multi-hop bridging across disjoint documents, fed into cross-encoder/nli-distilroberta-base for 3-class verdict classification (Supports, Refutes, Not Enough Info)."
+        ]
+    },
+    {
+        id: "ab-email-generator",
+        title: "Personalized Email Campaign Generator with A/B Testing",
+        description: "A stateful LangGraph agent orchestrating multi-LLM providers to generate persona-conditioned emails, coupled with a Bayesian A/B engine and closed-loop prompt optimization.",
+        tags: ["LangGraph", "LangChain", "Gemini API", "GPT-4o", "Claude API", "FastAPI", "SciPy", "MLflow", "Streamlit", "Docker"],
+        category: "llm",
+        type: "Featured Agentic System",
+        architecture: "Stateful LangGraph Multi-LLM Cycle & Closed-Loop Prompt Optimization",
+        metric: "Bayesian Beta-Distribution + Monte Carlo Simulation (N=100,000) at 95% confidence",
+        resource: "Multi-LLM (Gemini, GPT-4o, Claude)",
+        github: "https://github.com/VaishnaviThirumala07/Personalized-Email-Campaign-Generator",
+        details: [
+            "Orchestrated a stateful LangGraph agent across multi-LLM providers (Gemini, GPT-4o, Claude) to generate persona-conditioned email variants per CRM segment with structured JSON output.",
+            "Built a Bayesian A/B engine using Beta-distribution priors + Monte Carlo simulation (N = 100,000) to evaluate P(CTR A > CTR B), auto-declaring winners at 95% confidence.",
+            "Implemented closed-loop prompt optimization appending winning attributes to a per-segment few-shot bank, steering LLM output over up to 5 iterative optimization loops."
+        ]
+    },
+    {
         id: "ai-career-mentor",
-        title: "AI Career Mentor",
+        title: "AI Career Mentor & Skill Gap Analyzer",
         description: "An intelligent career advisory platform powered by NLP and RAG architectures, analyzing resumes against live job descriptions to dynamically extract skill gaps and generate personalized learning roadmaps.",
         tags: ["Gemini API", "RAG", "SentenceTransformers", "FastAPI", "Streamlit"],
         category: "llm",
         type: "GenAI Advisory System",
         architecture: "Semantic Resume Matching & Gap Analysis",
         metric: "Semantic Skill Alignment",
-        resource: "Powered by Gemini-1.5-Pro",
+        resource: "Powered by Gemini API",
         github: "https://github.com/VaishnaviThirumala07/AI_Career_Mentor",
         details: [
             "Developed an interactive career mentoring system utilizing the Gemini API and a semantic vector similarity index to compare user resumes against high-dimensional embeddings of tech job profiles.",
             "Engineered a semantic skill-gap extraction pipeline using SentenceTransformers, highlighting missing qualifications, keywords, and domain requirements with custom visual mappings.",
             "Orchestrated an agentic roadmap generator creating week-by-week technical learning schedules tailored to bridging the identified gaps and preparing for technical interviews."
-        ]
-    },
-    {
-        id: "churnops-mlops",
-        title: "ChurnOps: Automated MLOps Pipeline",
-        description: "A production-grade customer churn predictive ecosystem featuring stacking ensembles with optimized decision thresholds, Continuous Training (CT) triggers, and automated model promotion.",
-        tags: ["XGBoost", "LightGBM", "Optuna", "MLflow", "DVC", "Docker", "Evidently AI", "Prometheus"],
-        category: "mlops",
-        type: "Featured Project",
-        architecture: "Predictive Stacking Ensemble (via 5-fold CV)",
-        metric: "90.4% Accuracy, 0.91 ROC-AUC (560%+ ROI)",
-        resource: "IBM Telco dataset (7,043 rows)",
-        github: "https://github.com/VaishnaviThirumala07/ChurnOps-Automated-ML-Pipeline",
-        details: [
-            "Engineered a production-grade stacking ensemble (XGBoost, LightGBM, Random Forest + Logistic Regression meta-learner via 5-fold CV), boosting accuracy from 81.2% to 90.4% and ROC-AUC from 0.84 to 0.91 on the IBM Telco dataset (7,043 rows).",
-            "Designed a business-aware decision threshold optimizer evaluating 100 probability intervals against customer LTV ($500) and campaign cost ($50), maximizing net profit to $40,800 per 1,000 customers (yielding a 560%+ ROI).",
-            "Built a closed-loop, self-healing retraining system using Evidently AI for drift detection, Prometheus for metric exposure, and GitHub Actions to auto-trigger DVC retraining and MLflow model registry promotion when drift share exceeds 50%."
-        ]
-    },
-    {
-        id: "rag-facthop",
-        title: "Multi-Hop RAG Fact Verification Engine",
-        description: "An end-to-end, zero-cloud multi-hop RAG pipeline verifying complex claims against a Wikipedia corpus, optimized to run locally under 1GB RAM on CPU.",
-        tags: ["FAISS", "BM25 Okapi", "spaCy NER", "HuggingFace", "FastAPI"],
-        category: "llm",
-        type: "Featured Project",
-        architecture: "2-Hop Iterative Hybrid Index",
-        metric: "66.67% Recall@5 on FEVER",
-        resource: "CPU-Only, <1GB RAM",
-        github: "https://github.com/VaishnaviThirumala07/FactHop",
-        details: [
-            "Developed an end-to-end multi-hop RAG pipeline verifying complex claims against a Wikipedia corpus, achieving a peak 66.67% Recall@5 on FEVER benchmark claims with a 1.2s average latency on CPU-only hardware.",
-            "Engineered a 2-hop iterative retrieval engine combining sparse BM25 Okapi search with dynamic in-memory FAISS dense reranking (all-MiniLM-L6-v2, 384-dim vectors), maintaining a highly localized pipeline under <1GB RAM with zero cloud dependency.",
-            "Integrated spaCy Named Entity Recognition (NER) for dynamic query expansion across entity types (PERSON, ORG) to bridge semantic context across disjoint documents, feeding a cross-encoder (nli-distilroberta-base) for three-class verdict classification (Supports, Refutes, Not Enough Info)."
-        ]
-    },
-    {
-        id: "ab-email-generator",
-        title: "Personalized Email Generator & A/B Tester",
-        description: "A generative AI campaign system powered by LLM agent graphs that drafts targeted marketing email variants and runs simulated, statistically sound Bayesian A/B tests.",
-        tags: ["LangGraph", "LangChain", "Gemini API", "SciPy", "MLflow", "Streamlit", "Docker"],
-        category: "llm",
-        type: "Generative AI System",
-        architecture: "LangGraph LLM Agent Cycle",
-        metric: "Bayesian Monte Carlo CTR Verification",
-        resource: "Dynamic User Persona Synthesis",
-        github: "https://github.com/VaishnaviThirumala07/Personalized-Email-Campaign-Generator",
-        details: [
-            "Orchestrated a stateful LangGraph agent workflow across multi-LLM providers (Gemini, GPT-4o, Claude) to generate persona-conditioned email variants per CRM segment (young professional, executive, retiree) with structured JSON output parsing.",
-            "Implemented a Bayesian A/B testing engine using Beta-distribution conjugate priors and Monte Carlo simulation (N = 100,000) to evaluate P(CTR A > CTR B), automatically declaring a winning variant at a 95% confidence threshold.",
-            "Built a closed-loop prompt optimization system appending winning variant attributes to a dynamic few-shot JSON bank per segment, iteratively steering the LLM toward higher-performing copy styles across up to 5 optimization loops."
         ]
     },
     {
@@ -291,38 +294,6 @@ const projectsData = [
             "Extracted semantic content from headlines using n-gram tf-idf matrices (unigrams to trigrams) to retain local context.",
             "Optimized Logistic Regression and Multinomial Naive Bayes models via fine-grained GridSearchCV, validating convergence patterns.",
             "Evaluated downstream classification boundaries using precision-recall contours and confusion matrices, securing a peak F1-score of 0.90."
-        ]
-    },
-    {
-        id: "traffic-control",
-        title: "Adaptive Intersections Traffic Control",
-        description: "A smart cities ML simulation predicting optimal traffic light intervals by analyzing vehicle congestion patterns in real-time.",
-        tags: ["Jupyter Notebook", "Scikit-learn", "Pandas", "Regression"],
-        category: "mlops",
-        type: "Smart Cities ML",
-        architecture: "Predictive Congestion Regressor",
-        metric: "Minimizes Queue Overhead",
-        resource: "Synthetic Traffic Stream Model",
-        github: "https://github.com/VaishnaviThirumala07/Adaptive-Traffic-Control",
-        details: [
-            "Built regression-based light interval selectors adapting cycles dynamic to simulated lanes congestion thresholds.",
-            "Demonstrated theoretical delays reductions across major intersections under intensive stress tests."
-        ]
-    },
-    {
-        id: "bias-detection",
-        title: "Algorithmic Bias in AI Content Detectors",
-        description: "A systematic study evaluating native biases across standard AI detectors (like GPTZero clones) against non-native English writing profiles.",
-        tags: ["Jupyter Notebook", "NLTK", "Scikit-learn", "Hypothesis"],
-        category: "nlp",
-        type: "Algorithmic Audit",
-        architecture: "Statistical Bias Auditor",
-        metric: "False Positive Ratio Audit",
-        resource: "Diverse L2 English Writing Samples",
-        github: "https://github.com/VaishnaviThirumala07/Algorithmic-Bias-in-AI-Content-Detection",
-        details: [
-            "Conducted extensive statistical auditing measuring false positive rates across diverse text corpuses.",
-            "Proved systemic over-classification of L2 English writers due to sentence structural perplexity thresholds, presenting mitigation adjustments."
         ]
     }
 ];
